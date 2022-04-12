@@ -36,7 +36,7 @@ export class CoursesComponent implements OnInit {
       title:"",
       description:"",
       percentComplete:0,
-      favourite:false,
+      favorite:false,
     }
     this.selectedCourse=emptyCourse;
   }
