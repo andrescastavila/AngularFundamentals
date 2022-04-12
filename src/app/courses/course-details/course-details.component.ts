@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-course-details',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course-details.component.scss']
 })
 export class CourseDetailsComponent implements OnInit {
+
+  @Input() course;
+  @Output() saved = new EventEmitter();
+  @Output() cancelled = new EventEmitter();
 
   constructor() { }
 
