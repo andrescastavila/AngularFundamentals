@@ -27,6 +27,18 @@ export class CoursesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.resetSelectedCourse();
+  }
+
+  resetSelectedCourse(){
+    const emptyCourse={
+      id:null,
+      title:"",
+      description:"",
+      percentComplete:0,
+      favourite:false,
+    }
+    this.selectedCourse=emptyCourse;
   }
 
   selectCourse(course){
@@ -36,6 +48,11 @@ export class CoursesComponent implements OnInit {
 
   deleteCourse(courseId){
     console.log("Course Deleted" , courseId)
+  }
+
+
+  cancel(){
+    this.resetSelectedCourse();
   }
 
 }
