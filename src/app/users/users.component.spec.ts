@@ -19,7 +19,11 @@ describe('UsersComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should have the correct title', () =>{
+    expect(component.title).toBe('Hello Users');
+  })
+
+  // it('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
 });
